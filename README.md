@@ -1,7 +1,7 @@
-twitter-aba-sentiment
+twitter-higher-ed
 ==============================
 
-To compare sentiment about how ABA practitioners talk about their own profession compared to otehr helping professions such as in medicine. 
+To compare social media conversations about how people talked about onlinea learning before and after COVID-19. 
 
 Project Organization
 ------------
