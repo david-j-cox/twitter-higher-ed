@@ -57,6 +57,10 @@ for i in online_learning:
     # Add new data to our growing list
     online_tweets = online_tweets.append(add_tweets)
 
+#%% Add col and save it
+online_tweets['time'] = 'pre-COVID'
+online_tweets.to_csv('pre_covid_learning.csv')
+
 #%% Scrape Twitter for seed dataframe
 !snscrape --jsonl --progress --max-results 10000000 --since 2021-03-01 twitter-search "digital learning until:2021-05-01" > text-query-tweets.json
 
@@ -79,19 +83,20 @@ for i in online_learning:
     # Add new data to our growing list
     online_tweets_post = online_tweets_post.append(add_tweets)
 
-#%% Add col for hashtag focus
-online_tweets['time'] = 'pre-COVID'
-online_tweets.to_csv('pre_covid_learning.csv')
+#%% Add col and save it
 online_tweets_post['time'] = 'post-COVID'
-online_tweets.to_csv('post_covid_learning.csv')
+online_tweets_post.to_csv('post_covid_learning.csv')
 
 #%% Concatenate all the dfs to each other
-print("Expected length: ", len(bx_tweets) + len(abtx_tweets) + len(aba_tweets) + len(appliedbehavioranalysis_tweets) + len(med_tweets))
-all_tweets = bx_tweets.append(abtx_tweets)
-all_tweets = all_tweets.append(aba_tweets)
-all_tweets = all_tweets.append(appliedbehavioranalysis_tweets)
-all_tweets = all_tweets.append(med_tweets)
+print("Expected length: ", len(online_tweets) + len(online_tweets_post)
+all_tweets = online_tweets.append(online_tweets_post)
+# all_tweets = all_tweets.append(aba_tweets)
+# all_tweets = all_tweets.append(appliedbehavioranalysis_tweets)
+# all_tweets = all_tweets.append(med_tweets)
 print("Observed length: ", len(all_tweets))
 
 #%% Save it
-all_tweets.to_csv('aba_twitter_scrape.csv')
+all_tweets.to_csv('higher_ed_twitter_scrape.csv')
+
+#%% Freeze requirements.txt
+pip3 freeze > requirements.txt
