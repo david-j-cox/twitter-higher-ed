@@ -80,8 +80,10 @@ for i in online_learning:
     online_tweets_post = online_tweets_post.append(add_tweets)
 
 #%% Add col for hashtag focus
-oneline_tweets['time'] = 'pre-COVID'
+online_tweets['time'] = 'pre-COVID'
+online_tweets.to_csv('pre_covid_learning.csv')
 online_tweets_post['time'] = 'post-COVID'
+online_tweets.to_csv('post_covid_learning.csv')
 
 #%% Concatenate all the dfs to each other
 print("Expected length: ", len(bx_tweets) + len(abtx_tweets) + len(aba_tweets) + len(appliedbehavioranalysis_tweets) + len(med_tweets))
