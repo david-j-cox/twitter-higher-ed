@@ -1,7 +1,7 @@
 twitter-higher-ed
 ==============================
 
-To compare social media conversations about how people talked about onlinea learning before and after COVID-19. 
+To compare social media conversations about how people talked about online learning before and after COVID-19. 
 
 Project Organization
 ------------
