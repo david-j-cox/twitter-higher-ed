@@ -88,7 +88,7 @@ online_tweets_post['time'] = 'post-COVID'
 online_tweets_post.to_csv('post_covid_learning.csv')
 
 #%% Concatenate all the dfs to each other
-print("Expected length: ", len(online_tweets) + len(online_tweets_post)
+print("Expected length: ", len(online_tweets) + len(online_tweets_post))
 all_tweets = online_tweets.append(online_tweets_post)
 # all_tweets = all_tweets.append(aba_tweets)
 # all_tweets = all_tweets.append(appliedbehavioranalysis_tweets)
@@ -99,4 +99,4 @@ print("Observed length: ", len(all_tweets))
 all_tweets.to_csv('higher_ed_twitter_scrape.csv')
 
 #%% Freeze requirements.txt
-pip3 freeze > requirements.txt
+!pip3 freeze > requirements.txt
