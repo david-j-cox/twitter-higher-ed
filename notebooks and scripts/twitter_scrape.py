@@ -7,7 +7,7 @@ FUNCTION: The purpose of this script is to scrape Twitter for Tweets containing
 
 LAST UPDATED: 08/26/2021
 
-OWNER: Your Name
+OWNER: David J. Cox
 '''
 
 # In case it needs to be installed
