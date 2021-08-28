@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 '''
 FUNCTION: The purpose of this script is to scrape Twitter for Tweets containing
-          text from the lists below pertaining to
+          text from the lists below pertaining to online learning before 
+          and after COVID-19
 
 LAST UPDATED: 08/26/2021
 
